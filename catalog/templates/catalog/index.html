@@ -9,6 +9,9 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+    background-image: url("media/images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h1{
@@ -42,15 +45,12 @@ p{
     </style>
 <div class="welcome" style="text-align: left;font-size: 25px;">
     {% if user.is_authenticated %}
-        Welcome, {{ user.first_name }} {{ user.last_name }}
+
     {% endif %}
 </div>
 <h1>Fluff N' Scales</h1>
-<h2>We Love Animals!</h2>
-{% load static %}
-<img class ="dog1" src="{% static 'dog1.jpg' %}">
+<p style="padding-left: 140px;padding-right: 140px">Welcome to the Fluff N' Scales, a place where pet lovers from around the world come together to celebrate the joy and companionship our furry, feathered, and scaly friends bring into our lives. Here, you can immerse yourself in a delightful collection of pet images contributed by our community.</p>
+    {% load static %}
 
-<img class ="dog2" src="{% static 'dog2.jpg' %}">
-<br>
 
 {% endblock %}
